@@ -1,0 +1,85 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ththa\\source\\repos\\WebApplication1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{30ED7E84-0513-44C8-AF40-07FEAC13D092}|WebApplication1\\WebApplication1.csproj|c:\\users\\ththa\\source\\repos\\webapplication1\\webapplication1\\model\\suitetask.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30ED7E84-0513-44C8-AF40-07FEAC13D092}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\model\\suitetask.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30ED7E84-0513-44C8-AF40-07FEAC13D092}|WebApplication1\\WebApplication1.csproj|c:\\users\\ththa\\source\\repos\\webapplication1\\webapplication1\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30ED7E84-0513-44C8-AF40-07FEAC13D092}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30ED7E84-0513-44C8-AF40-07FEAC13D092}|WebApplication1\\WebApplication1.csproj|c:\\users\\ththa\\source\\repos\\webapplication1\\webapplication1\\model\\taskchatmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30ED7E84-0513-44C8-AF40-07FEAC13D092}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\model\\taskchatmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30ED7E84-0513-44C8-AF40-07FEAC13D092}|WebApplication1\\WebApplication1.csproj|c:\\users\\ththa\\source\\repos\\webapplication1\\webapplication1\\migrations\\20240726095854_holysheet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30ED7E84-0513-44C8-AF40-07FEAC13D092}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\migrations\\20240726095854_holysheet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SuiteTask.cs",
+              "DocumentMoniker": "C:\\Users\\ththa\\source\\repos\\WebApplication1\\WebApplication1\\Model\\SuiteTask.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Model\\SuiteTask.cs",
+              "ToolTip": "C:\\Users\\ththa\\source\\repos\\WebApplication1\\WebApplication1\\Model\\SuiteTask.cs",
+              "RelativeToolTip": "WebApplication1\\Model\\SuiteTask.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-26T10:01:46.26Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "20240726095854_holysheet.cs",
+              "DocumentMoniker": "C:\\Users\\ththa\\source\\repos\\WebApplication1\\WebApplication1\\Migrations\\20240726095854_holysheet.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Migrations\\20240726095854_holysheet.cs",
+              "ToolTip": "C:\\Users\\ththa\\source\\repos\\WebApplication1\\WebApplication1\\Migrations\\20240726095854_holysheet.cs",
+              "RelativeToolTip": "WebApplication1\\Migrations\\20240726095854_holysheet.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-26T09:58:54.235Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TaskChatMessage.cs",
+              "DocumentMoniker": "C:\\Users\\ththa\\source\\repos\\WebApplication1\\WebApplication1\\Model\\TaskChatMessage.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Model\\TaskChatMessage.cs",
+              "ToolTip": "C:\\Users\\ththa\\source\\repos\\WebApplication1\\WebApplication1\\Model\\TaskChatMessage.cs",
+              "RelativeToolTip": "WebApplication1\\Model\\TaskChatMessage.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABUAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-26T09:58:01.984Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\ththa\\source\\repos\\WebApplication1\\WebApplication1\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Data\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\ththa\\source\\repos\\WebApplication1\\WebApplication1\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "WebApplication1\\Data\\AppDbContext.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAzwBcAAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-26T09:32:31.544Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
