@@ -11,7 +11,7 @@ namespace WebApplication1.Model
 
         public int UserID_FK { get; set; }
 
-        public DateTime DateUploaded { get; set; } = DateTime.UtcNow;
+        public DateTime DateUploaded { get; set; }
 
         [MaxLength(200)]
         public string FileName_Actual { get; set; }
@@ -28,6 +28,6 @@ namespace WebApplication1.Model
 
         public int FileTo { get; set; }
 
-        public bool IsDeleted { get; set; } = false;
+        public bool IsDeleted { get; set; }
     }
 }

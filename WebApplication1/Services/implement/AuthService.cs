@@ -65,7 +65,7 @@ namespace WebApplication1.Services.implement
                 LastName = string.Empty,
                 DateCreated = DateTime.UtcNow,
                 DateDeleted = DateTime.MinValue,
-                AvatarPath = string.Empty,
+                AvatarPath = createUserRequest.Avatar,
                 EmailAddress = createUserRequest.Email,
                 ContactNumber = string.Empty,
                 MobileNumber = string.Empty,
@@ -101,15 +101,15 @@ namespace WebApplication1.Services.implement
         public string GenerateJwtToken(UserLoginDetails user)
         {
             var authClaims = new List<Claim>
-            {
-                new Claim(ClaimTypes.Name, user.LoginID),
-                new Claim(ClaimTypes.NameIdentifier, user.UserLoginID.ToString())
-            };
+                {
+                    new Claim(ClaimTypes.Name, user.LoginID),
+                    new Claim(ClaimTypes.NameIdentifier, user.UserLoginID.ToString())
+                };
             var authenKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]));
 
             var token = new JwtSecurityToken(
-                issuer: _configuration["JWT:Issuer"],
-                audience: _configuration["JWT:Issuer"],
+                issuer: _configuration["Jwt:Issuer"],
+                audience: _configuration["Jwt:Issuer"],
                 expires: DateTime.Now.AddHours(1),
                 claims: authClaims,
                 signingCredentials: new SigningCredentials(authenKey, SecurityAlgorithms.HmacSha512Signature)
@@ -117,45 +117,23 @@ namespace WebApplication1.Services.implement
 
             return new JwtSecurityTokenHandler().WriteToken(token);
         }
-
-        public UserAccount ParseToken(string token)
+        public UserAccount ParseToken(ClaimsPrincipal userPrincipal)
         {
-            var tokenHandler = new JwtSecurityTokenHandler();
-            var key = Encoding.ASCII.GetBytes(_configuration["Jwt:Key"]);
-            try
+            var userIdClaim = userPrincipal.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier)?.Value;
+            if (string.IsNullOrEmpty(userIdClaim))
             {
-                var principal = tokenHandler.ValidateToken(token, new TokenValidationParameters
-                {
-                    ValidateIssuerSigningKey = true,
-                    IssuerSigningKey = new SymmetricSecurityKey(key),
-                    ValidateIssuer = true,
-                    ValidIssuer = _configuration["Jwt:Issuer"],
-                    ValidateAudience = true,
-                    ValidAudience = _configuration["Jwt:Issuer"],
-                    ValidateLifetime = true
-                }, out SecurityToken validatedToken);
-
-                var jwtToken = (JwtSecurityToken)validatedToken;
-                var userIdClaim = jwtToken.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier).Value;
-                Console.WriteLine(userIdClaim);
-                if (userIdClaim == null)
-                {
-                    throw new SecurityTokenException("Invalid token");
-                }
-
-                var user = _context.UserAccounts.FirstOrDefault(u => u.UserId == int.Parse(userIdClaim));
-
-                if (user == null)
-                {
-                    throw new Exception("User not found");
-                }
-
-                return user;
+                throw new SecurityTokenException("Invalid token");
             }
-            catch (Exception ex)
+
+            var userId = int.Parse(userIdClaim);
+            var user = _context.UserAccounts.FirstOrDefault(u => u.UserId == userId);
+
+            if (user == null)
             {
-                throw new SecurityTokenException("Invalid token", ex);
+                throw new Exception("User not found");
             }
+
+            return user;
         }
     }
 }

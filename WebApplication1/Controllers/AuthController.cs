@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using WebApplication1.DTO.Request;
 using WebApplication1.Services.implement;
@@ -45,13 +46,13 @@ namespace WebApplication1.Controllers
             }
         }
 
+        [Authorize]
         [HttpPost("parse-token")]
-        public IActionResult ParseToken([FromBody] string token)
+        public IActionResult ParseToken()
         {
             try
             {
-                var user = _authService.ParseToken(token);
-
+                var user = _authService.ParseToken(User);
                 return Ok(new
                 {
                     user.UserId,
